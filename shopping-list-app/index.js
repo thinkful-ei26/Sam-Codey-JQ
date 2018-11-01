@@ -24,11 +24,15 @@ function main () {
 
     const element = generateNewItem(newItem);
     $('.shopping-list').append(element);
+
   });
 
-  $('.shopping-item-controls').on('click', event => {
-    $(event.currentTarget.parentElement.childNodes[1]).toggleClass('shopping-item__checked');
+  $('.shopping-list').on('click', '.shopping-item-toggle', event => {
+    console.log(event)
+    $(event.currentTarget.parentNode.parentElement.childNodes[1]).toggleClass('shopping-item__checked')
   })
+
+
 
 }
 
