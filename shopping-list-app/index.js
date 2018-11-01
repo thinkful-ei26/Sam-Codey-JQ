@@ -27,6 +27,7 @@ function main () {
 
   });
 
+  // refactor -> jquery methods to find the specific element
   $('.shopping-list').on('click', '.shopping-item-toggle', event => {
     console.log(event)
     $(event.currentTarget.parentNode.parentElement.childNodes[1]).toggleClass('shopping-item__checked')
