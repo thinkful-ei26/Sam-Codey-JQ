@@ -26,6 +26,10 @@ function main () {
     $('.shopping-list').append(element);
   });
 
+  $('.shopping-item-controls').on('click', event => {
+    $(event.currentTarget.parentElement.childNodes[1]).toggleClass('shopping-item__checked');
+  })
+
 }
 
 $(main);
