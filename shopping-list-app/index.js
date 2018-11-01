@@ -1,6 +1,7 @@
 'use strict';
 
 function generateNewItem(item) {
+ 
   return `
     <li>
         <span class="shopping-item">${item}</span>
@@ -29,10 +30,14 @@ function main () {
 
   // refactor -> jquery methods to find the specific element
   $('.shopping-list').on('click', '.shopping-item-toggle', event => {
-    console.log(event)
+    console.log(event);
     $(event.currentTarget.parentNode.parentElement.childNodes[1]).toggleClass('shopping-item__checked')
-  })
+  });
 
+  $('.shopping-list').on('click', '.shopping-item-delete', event => {
+    $(event.currentTarget.parentNode.parentElement).remove();
+    
+  });
 
 
 }
